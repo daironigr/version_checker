@@ -29,10 +29,10 @@ A Flutter plugin that makes it possible to:
 * Check if a user has the most recent version of your app installed.
 
 ## Installation
-Add new_version_plus as [a dependency in your `pubspec.yaml` file.](https://flutter.io/using-packages/)
+Add version_checker as [a dependency in your `pubspec.yaml` file.](https://flutter.io/using-packages/)
 ```
 dependencies:
-  new_version_plus: ^0.0.9
+  version_checker: ^0.0.1
 ```
 
 ## Usage
@@ -61,5 +61,6 @@ print(value!.storeLink);
 ```
 
 *For iOS:* If your app is only available outside the U.S. App Store, you will need to set `iOSAppStoreCountry` to the two-letter country code of the store you want to search. See http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for a list of ISO Country Codes.
+
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="daironigr" data-color="#5F7FFF" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>

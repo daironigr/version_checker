@@ -1,6 +1,6 @@
 name: version_checker
 description: A complete way to check if local app has available updates in respective stores (AppStore, AppGallery and PlayStore).
-version: 0.0.1
+version: 0.0.2
 homepage: https://github.com/daironigr/version_checker
 
 environment:
