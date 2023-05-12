@@ -172,6 +172,18 @@ class VersionChecker {
     var appInfo = body['appInfo'];
     String storeVersion = appInfo['versionNumber'];
     Uri storeLink = Uri.https("appgallery.huawei.com", "/app/C$appGalleryId");
+
+    /// The Apps in AppGallery have an attribute called releaseState that
+    /// indicates the release state of the app, in this case we expect it to be 0,
+    /// which indicates that it has been released successfully
+    /// Refers to: https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-References/agcapi-app-info-query-0000001158365045
+    if (body['releaseState'] != 0) {
+      return VersionStatus(
+        localVersion: _getCleanVersion(packageInfo.version),
+        storeVersion: _getCleanVersion(packageInfo.version),
+        storeLink: storeLink.toString(),
+      );
+    }
     return VersionStatus(
       localVersion: _getCleanVersion(packageInfo.version),
       storeVersion: _getCleanVersion(storeVersion),

@@ -18,6 +18,9 @@ class VersionStatus {
       if (local[i] < store[i]) {
         return true;
       }
+      if (local[i] > store[i]) {
+        return false;
+      }
     }
     return false;
   }
